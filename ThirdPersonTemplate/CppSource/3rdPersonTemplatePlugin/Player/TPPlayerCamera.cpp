@@ -107,17 +107,15 @@ void TPPlayerCameraComponent::Update()
   plGameObject* pPlayerController = m_pPlayerController->GetOwner();
   if (pPlayerController)
   {
-      plVec3 cameraPos = GetOwner()->GetGlobalPosition();
-      plVec3 playerPos = pPlayerController->GetGlobalPosition();
-      playerPos.z += 1;
+    plVec3 cameraPos = GetOwner()->GetGlobalPosition();
+    plVec3 playerPos = pPlayerController->GetGlobalPosition();
+    playerPos.z += 1;
 
-      float distance = plMath::Abs(cameraPos.GetLength() - playerPos.GetLength());
-    //  if (distance > 0.02)
-      {
-         distance = plMath::Max(0.1f, distance - 0.2f);
-         plVec3 newPos = playerPos;//plMath::Lerp(cameraPos, playerPos, m_fCameraDragStrength * distance * GetWorld()->GetClock().GetTimeDiff().AsFloatInSeconds());
-         GetOwner()->SetGlobalPosition(newPos);
-      }
+    float distance = plMath::Abs(cameraPos.GetLength() - playerPos.GetLength());
+
+    distance = plMath::Max(0.1f, distance - 0.2f);
+    plVec3 newPos = playerPos;
+    GetOwner()->SetGlobalPosition(newPos);
   }
 
   m_pPlayerController->Update(GetOwner()->GetGlobalRotation());
@@ -171,12 +169,6 @@ void TPPlayerCameraComponent::Update()
 
     if (bHit && hit.m_hActorObject != GetOwner()->GetHandle())
     {
-      plGameObject* hitObject = nullptr;
-      if (GetWorld()->TryGetObject(hit.m_hActorObject, hitObject))
-      {
-        plDebugRenderer::DrawInfoText(GetWorld(), plDebugTextPlacement::TopCenter, "Player Debug", hitObject->GetName());
-      }
-
       // Collision detected, adjust the camera position
       plVec3 collisionPoint = hit.m_vPosition;
       plVec3 collisionNormal = hit.m_vNormal;
