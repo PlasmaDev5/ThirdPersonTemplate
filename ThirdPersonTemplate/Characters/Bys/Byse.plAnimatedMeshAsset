@@ -1,0 +1,254 @@
+HeaderV2
+{
+o
+{
+	Uuid %id{u4{11025732298601397634,4638424946546903761}}
+	s %t{"plAssetDocumentInfo"}
+	u3 %v{2}
+	s %n{"Header"}
+	p
+	{
+		s %AssetType{"Animated Mesh"}
+		VarArray %Dependencies
+		{
+			s{"Characters/Bys/Byse.glb"}
+		}
+		Uuid %DocumentID{u4{11025732298601397634,4638424946546903761}}
+		u4 %Hash{4535874472001023500}
+		VarArray %MetaInfo{}
+		VarArray %Outputs{}
+		VarArray %PackageDeps
+		{
+			s{"{ 64ef986e-1537-4051-adc6-4193e159d8f8 }"}
+			s{"{ 837d60a0-e58d-4519-81d1-e53d9f090579 }"}
+			s{"{ 9083a1c0-9015-4eb5-80f2-3eaf3945602e }"}
+		}
+		VarArray %References
+		{
+			s{"Characters/Bys/Byse.glb"}
+			s{"{ 64ef986e-1537-4051-adc6-4193e159d8f8 }"}
+			s{"{ 837d60a0-e58d-4519-81d1-e53d9f090579 }"}
+			s{"{ 9083a1c0-9015-4eb5-80f2-3eaf3945602e }"}
+		}
+	}
+}
+}
+Objects
+{
+o
+{
+	Uuid %id{u4{2515043157053518777,5210439825948120475}}
+	s %t{"plMaterialResourceSlot"}
+	u3 %v{1}
+	p
+	{
+		s %Label{"Eyes"}
+		s %Resource{"{ 64ef986e-1537-4051-adc6-4193e159d8f8 }"}
+	}
+}
+o
+{
+	Uuid %id{u4{11385456931083500937,5518004479683844669}}
+	s %t{"plMaterialResourceSlot"}
+	u3 %v{1}
+	p
+	{
+		s %Label{"Material"}
+		s %Resource{"{ 9083a1c0-9015-4eb5-80f2-3eaf3945602e }"}
+	}
+}
+o
+{
+	Uuid %id{u4{4583434431890427044,5639294177278087502}}
+	s %t{"plAnimatedMeshAssetProperties"}
+	u3 %v{2}
+	p
+	{
+		s %BoneWeightPrecision{"plMeshBoneWeigthPrecision::_8Bit"}
+		s %DefaultSkeleton{"{ 837d60a0-e58d-4519-81d1-e53d9f090579 }"}
+		b %ImportMaterials{1}
+		VarArray %Materials
+		{
+			Uuid{u4{11385456931083500937,5518004479683844669}}
+			Uuid{u4{2515043157053518777,5210439825948120475}}
+		}
+		s %MeshFile{"Characters/Bys/Byse.glb"}
+		s %NormalPrecision{"plMeshNormalPrecision::_16Bit"}
+		b %NormalizeWeights{1}
+		b %RecalculateNormals{0}
+		b %RecalculateTangents{0}
+		s %TexCoordPrecision{"plMeshTexCoordPrecision::_16Bit"}
+		s %VertexColorConversion{"plMeshVertexColorConversion::None"}
+	}
+}
+o
+{
+	Uuid %id{u4{18096612296587978288,6449934965513159559}}
+	s %t{"plDocumentRoot"}
+	u3 %v{1}
+	s %n{"ObjectTree"}
+	p
+	{
+		VarArray %Children
+		{
+			Uuid{u4{4583434431890427044,5639294177278087502}}
+		}
+	}
+}
+}
+Types
+{
+o
+{
+	Uuid %id{u4{11674692945138119280,7958532569312584972}}
+	s %t{"plReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"plTypeFlags::Class|plTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"plEditorPluginAssets"}
+		VarArray %Properties{}
+		s %TypeName{"plMaterialResourceSlot"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{7009381072334277535,9659459603664967231}}
+	s %t{"plReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"plTypeFlags::Class|plTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"plReflectedClass"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"plDocumentRoot"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{16819636187740221814,11089501717885464587}}
+	s %t{"plReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"plTypeFlags::Class|plTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"plEnumBase"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{7247182849452030899,11149460721636790200}}
+	s %t{"plReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"plTypeFlags::IsEnum|plTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"plEnumBase"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"plMeshVertexColorConversion"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{4643690287530692169,11712829831668807985}}
+	s %t{"plReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"plTypeFlags::IsEnum|plTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"plEnumBase"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"plMeshBoneWeigthPrecision"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{4101022314413477917,13769697156274436726}}
+	s %t{"plReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"plTypeFlags::IsEnum|plTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"plEnumBase"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"plMeshNormalPrecision"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{4664618235186762955,16317954485104532494}}
+	s %t{"plReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"plTypeFlags::IsEnum|plTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"plEnumBase"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"plMeshTexCoordPrecision"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{13033624727069548121,17368468367984449402}}
+	s %t{"plReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"plTypeFlags::Class|plTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"plReflectedClass"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{17191326313046790647,18368982324238510175}}
+	s %t{"plReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"plTypeFlags::Class|plTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"plReflectedClass"}
+		s %PluginName{"plEditorPluginAssets"}
+		VarArray %Properties{}
+		s %TypeName{"plAnimatedMeshAssetProperties"}
+		u3 %TypeVersion{2}
+	}
+}
+}

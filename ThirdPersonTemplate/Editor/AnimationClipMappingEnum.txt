@@ -1,0 +1,10 @@
+Fidget
+Idle
+RunBack
+RunForward
+RunLeft
+RunRight
+WalkBack
+WalkForward
+WalkLeft
+WalkRight
