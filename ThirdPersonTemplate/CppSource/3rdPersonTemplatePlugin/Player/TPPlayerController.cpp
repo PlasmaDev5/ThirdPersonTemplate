@@ -1,7 +1,8 @@
 #include <3rdPersonTemplatePlugin/3rdPersonTemplatePluginPCH.h>
 
 // Plasma
-#include <JoltPlugin/Character/JoltCharacterControllerComponent.h>
+#include <JoltPlugin/Character/JoltDefaultCharacterComponent.h>
+#include <GameEngine/Physics/CharacterControllerComponent.h>
 #include <GameEngine/Gameplay/BlackboardComponent.h>
 #include <GameEngine/Gameplay/InputComponent.h>
 
@@ -27,6 +28,8 @@ PL_END_COMPONENT_TYPE
 TPPlayerControllerComponent::TPPlayerControllerComponent() = default;
 TPPlayerControllerComponent::~TPPlayerControllerComponent() = default;
 
+#pragma optimize("", off)
+
 void TPPlayerControllerComponent::OnSimulationStarted()
 {
   SUPER::OnSimulationStarted();
@@ -42,7 +45,7 @@ void TPPlayerControllerComponent::Update(plQuat cameraRotation)
     return;
   }
 
-  plJoltCharacterControllerComponent* pCharacterController = nullptr;
+  plJoltDefaultCharacterComponent* pCharacterController = nullptr;
   if (!GetOwner()->TryGetComponentOfBaseType( pCharacterController))
   {
     return;
@@ -65,7 +68,7 @@ void TPPlayerControllerComponent::Update(plQuat cameraRotation)
   // Move the character
   plMsgMoveCharacterController msg;
   {
-    msg.m_bJump = pCharacterController->IsTouchingGround() && pInput->GetCurrentInputState("Jump", true) > 0.5;
+    msg.m_bJump = pCharacterController->IsStandingOnGround() && pInput->GetCurrentInputState("Jump", true) > 0.5;
     msg.m_fMoveForwards = pInput->GetCurrentInputState("MoveForwards", false);
     msg.m_fMoveBackwards = pInput->GetCurrentInputState("MoveBackwards", false);
     msg.m_fStrafeLeft = pInput->GetCurrentInputState("StrafeLeft", false);
@@ -104,3 +107,4 @@ void TPPlayerControllerComponent::DeserializeComponent(plWorldReader& stream)
   auto& s = stream.GetStream();
   s >> m_fRotationSpeed;
 }
+#pragma optimize("", on)
